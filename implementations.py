@@ -18,6 +18,7 @@ class Built_in_Data_Strucutes:
         else: 
             find_month = input("Please enter in a number between 1-12: ")
 
+    # A set of fruits and vegetables
     set_of_greens = {"Apple", "Carrot", "Beat", "Pear", "Cucumber"}
 
     # Has the user add two fruits and two vegetables to a set
@@ -39,3 +40,17 @@ class Built_in_Data_Strucutes:
         for green in self.set_of_greens:
             print(green)
         
+    # A dictionary containing first and last name, email address and phone number
+    contact_dictionary = {
+        "first_name": "Ethan",
+        "last_name" : "Doering",
+        "email"     : "ethanwdoering@icloud.com",
+        "phone"     : 5052152554
+    }
+
+    # Prints out a contacts first and last name, email address and phone number
+    def print_contact_info(self):
+        print(f"\nHello my name is %s %s"                      % (self.contact_dictionary.get("first_name"), self.contact_dictionary.get("last_name")))
+        print("And my email is %s and my phone number is (%d)" % (self.contact_dictionary.get("email"), self.contact_dictionary.get("phone")))
+
+
