@@ -3,7 +3,7 @@ class Built_in_Data_Strucutes:
     def __init__(self):
         pass
 
-    # Task 1: Dictionary, Tuple, and Set
+# TASK 1: Dictionary, Tuple, and Set
 
     # A tuple of all 12 months
     months = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
@@ -19,7 +19,7 @@ class Built_in_Data_Strucutes:
             find_month = input("Please enter in a number between 1-12: ")
 
     # A set of fruits and vegetables
-    set_of_greens = {"Apple", "Carrot", "Beat", "Pear", "Cucumber"}
+    set_of_greens = set()
 
     # Has the user add two fruits and two vegetables to a set
     def add_greens(self):
@@ -50,7 +50,33 @@ class Built_in_Data_Strucutes:
 
     # Prints out a contacts first and last name, email address and phone number
     def print_contact_info(self):
-        print(f"\nHello my name is %s %s"                      % (self.contact_dictionary.get("first_name"), self.contact_dictionary.get("last_name")))
+        print("\nHello my name is %s %s"                       % (self.contact_dictionary.get("first_name"), self.contact_dictionary.get("last_name")))
         print("And my email is %s and my phone number is (%d)" % (self.contact_dictionary.get("email"), self.contact_dictionary.get("phone")))
 
+# TASK 2: List of Dictionaries
 
+    # A list of dictionaries that contain family names and relationships
+    family_list = [
+        {
+            "first_name"   : "Sophie",
+            "last_name"    : "Doering",
+            "relationship" : "Sister"
+        },
+        {
+            "first_name"   : "Micah",
+            "last_name"    : "Doering",
+            "relationship" : "Dad"
+        },
+        {
+            "first_name"   : "Abby",
+            "last_name"    : "Chiardia",
+            "relationship" : "Fiancéé"
+        }
+    ]
+
+    # Prints the first name and relationship from family_list
+    def name_relationship_printer(self):
+        index = 0
+        for member in self.family_list:
+            print("\n%s is in my family and they are my %s." % (self.family_list[index["first_name"]], self.family_list[index["relationship"]]))
+            index += 1
