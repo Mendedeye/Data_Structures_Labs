@@ -19,10 +19,30 @@ class BinaryNode:
         else:
             self.data = data
 
+# Searches for a given node and tells the path to the node
     def search_for_node(self, data):
-        pass
+        is_found = "Node Found!"
+        not_found = "Node not found."
 
-
+        if self.data == data:
+            return(print(is_found))
+        else: 
+            if data > self.data:
+                print("Right")
+                if self.right.data == data:
+                    return(print(is_found))
+                elif self.right.data == None:
+                    return(print(not_found))
+                else:
+                    self.right.search_for_node(data)
+            elif data < self.data:
+                print("Left")
+                if self.left.data == data:
+                    return(print(is_found))
+                elif self.left.data == None:
+                    return(print(not_found))
+                else: 
+                    self.left.search_for_node(data)
 
 root = BinaryNode(20)
 root.insert_node(15)
@@ -30,3 +50,4 @@ root.insert_node(265)
 root.insert_node(25)
 root.insert_node(22)
 root.insert_node(17)
+root.search_for_node(22)
