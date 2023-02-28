@@ -12,14 +12,3 @@ data_methods = Built_in_Data_Strucutes()
 
 #data_methods.name_relationship_printer()
 
-linked_list = LinkedLists()
-linked_list.append_node(55)
-linked_list.append_node(60)
-linked_list.append_node(65)
-linked_list.append_node(70)
-
-find1 = linked_list.find_node(60)
-find2 = linked_list.find_node(90)
-
-print(find1)
-print(find2)
